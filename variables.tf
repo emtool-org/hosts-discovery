@@ -46,5 +46,5 @@ variable "_source" {
 
 variable "gateid" {
   type    = string
-  default = "6fff0855-803f-411e-be48-d78a69b82477"
+  default = ""
 }
