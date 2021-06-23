@@ -20,12 +20,13 @@ provider "aws" {
 module "elb-discovery" {
   source   = "github.com/emtool-org/hosts-discovery"
 
-  name     = "ELBDomainDiscovery"
-  skip_tag = "SkipDomainDiscovery"
-  regions  = ["us-east-1", "eu-west-1"]
-  api_url  = "https://import.emtool.org/v1/domains/import/JAfqzxRdCuD9oO"
-  _source  = "QA-account"
-  gateid   = "11"
+  name      = "ELBDomainDiscovery"
+  skip_tag  = "SkipDomainDiscovery"
+  regions   = ["us-east-1", "eu-west-1"]
+  api_url   = "https://import.emtool.org/v1/domains/import/"
+  api_token = "SecureToken"
+  _source   = "MY-account"
+  gateid    = "11"
 
 }
 ```
