@@ -40,6 +40,6 @@ module "elb-discovery" {
 | skip\_tag | ELB Tag key for skip discovery | `string` | `SkipDomainDiscovery` | no |
 | regions | List of regions for discovery | `list(string)` | ["us-east-1"] | yes |
 | api\_url | API url for post queries | `string` | `https://import.emtool.org/v1/domains/import/` | yes |
-| api\_token | Authorization token for API | 'string' | | yes |
+| api\_token | Authorization token for API | `string` | | yes |
 | _source | Name of information source | `string` | `ELB` | yes |
-| gateid | ID of resolver gate | `string` |  | no |
+| gateid | ID of resolver gate ('General gate if ommited') | `string` |  | no |
