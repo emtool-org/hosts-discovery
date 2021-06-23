@@ -4,12 +4,22 @@ Terraform module to auto discovery host names from AWS Load balancers.
 
 ## Usage
 
+To run this example you need to execute:
+
+```bash
+$ terraform init
+$ terraform plan
+$ terraform apply
+```
+
 ```hcl
 provider "aws" {
   region = "us-east-1"
 }
 
 module "elb-discovery" {
+  source   = "github.com/emtool-org/hosts-discovery"
+
   name     = "ELBDomainDiscovery"
   skip_tag = "SkipDomainDiscovery"
   regions  = ["us-east-1", "eu-west-1"]
@@ -30,5 +40,5 @@ module "elb-discovery" {
 | regions | List of regions for discovery | `list(string)` | ["us-east-1"] | yes |
 | api\_url | API url for post queries | `string` | `https://import.emtool.org/v1/domains/import/` | yes |
 | api\_token | Authorization token for API | 'string' | | yes |
-| _source | ???? | `string` | `ELB` | yes |
+| _source | Name of information source | `string` | `ELB` | yes |
 | gateid | ID of resolver gate | `string` |  | no |
