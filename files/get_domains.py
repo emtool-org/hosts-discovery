@@ -9,7 +9,7 @@ REGIONS = os.getenv('REGIONS')
 TYPES   = os.getenv('TYPES')
 API_URL = os.getenv('API_URL')
 SOURCE  = os.getenv('SOURCE')
-GATEID  = os.getenv('GATEID')
+GATEID  = os.getenv('GATE_NAME')
 
 logger = logging.getLogger()
 logger.setLevel(logging.INFO)

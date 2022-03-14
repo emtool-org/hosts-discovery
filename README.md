@@ -26,7 +26,7 @@ module "elb-discovery" {
   api_url   = "https://import.emtool.org/v1/domains/import/"
   api_token = "SecureToken"
   _source   = "MY-account"
-  gateid    = "11"
+  gate_name = "maingate"
 
 }
 ```
@@ -42,4 +42,4 @@ module "elb-discovery" {
 | api\_url | API url for post queries | `string` | `https://import.emtool.org/v1/domains/import/` | yes |
 | api\_token | Authorization token for API | `string` | | yes |
 | _source | Name of information source | `string` | `ELB` | yes |
-| gateid | ID of resolver gate ('General gate if ommited') | `string` |  | no |
+| gate_name | Name of resolver gate ('General gate if ommited') | `string` |  | no |

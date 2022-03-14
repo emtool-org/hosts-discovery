@@ -41,12 +41,12 @@ resource "aws_lambda_function" "attach_lambda_function" {
 
   environment {
     variables = {
-      SKIP_TAG = var.skip_tag
-      REGIONS  = jsonencode(var.regions)
-      TYPES    = jsonencode(var.types)
-      API_URL  = format("%s/%s", var.api_url, var.api_token)
-      SOURCE   = var._source
-      GATEID   = var.gateid
+      SKIP_TAG  = var.skip_tag
+      REGIONS   = jsonencode(var.regions)
+      TYPES     = jsonencode(var.types)
+      API_URL   = format("%s/%s", var.api_url, var.api_token)
+      SOURCE    = var._source
+      GATE_NAME = var.gate_name
     }
   }
 

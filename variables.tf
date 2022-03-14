@@ -44,7 +44,7 @@ variable "_source" {
   default = "ELB"
 }
 
-variable "gateid" {
+variable "gate_name" {
   type    = string
   default = ""
 }
